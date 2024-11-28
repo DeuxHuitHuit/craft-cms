@@ -69,7 +69,7 @@ class Utilities extends Component
         $utilityTypes = [
             UpdatesUtility::class,
             SystemReport::class,
-            ProjectConfigUtility::class
+            ProjectConfigUtility::class,
         ];
 
         if (PhpInfo::isAvailable()) {
