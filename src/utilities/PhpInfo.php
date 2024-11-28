@@ -53,6 +53,16 @@ class PhpInfo extends Utility
     }
 
     /**
+     * Returns whether the utility is available.
+     * @since 5.6.0
+     * @return bool
+     */
+    public static function isAvailable(): bool
+    {
+        return \function_exists('phpinfo');
+    }
+
+    /**
      * Parses and returns the PHP info.
      *
      * @return array

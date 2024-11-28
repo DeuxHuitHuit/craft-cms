@@ -69,9 +69,12 @@ class Utilities extends Component
         $utilityTypes = [
             UpdatesUtility::class,
             SystemReport::class,
-            ProjectConfigUtility::class,
-            PhpInfo::class,
+            ProjectConfigUtility::class
         ];
+
+        if (PhpInfo::isAvailable()) {
+            $utilityTypes[] = PhpInfo::class;
+        }
 
         if (Craft::$app->edition->value >= CmsEdition::Pro->value) {
             $utilityTypes[] = SystemMessagesUtility::class;
